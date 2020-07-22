@@ -13,6 +13,8 @@ RUN make && make install
 WORKDIR /usr/src
 RUN git clone https://github.com/aws/aws-sdk-cpp.git
 RUN mkdir aws-sdk-cpp/build
+WORKDIR /usr/src/aws-sdk-cpp
+RUN git checkout 92d99ba3c9ee5bffdb00299c6c9ff2de50116ba9
 WORKDIR /usr/src/aws-sdk-cpp/build
 RUN cmake .. -DBUILD_SHARED_LIBS=OFF -DBUILD_ONLY="dynamodb"
 RUN make && make install
