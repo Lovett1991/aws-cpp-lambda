@@ -27,6 +27,7 @@ invocation_response my_handler(invocation_request const& request)
 int main()
 {
    Aws::SDKOptions options;
+   options.loggingOptions.logLevel = Aws::Utils::Logging::LogLevel::Trace;
    Aws::InitAPI(options);
 
    run_handler(my_handler);
