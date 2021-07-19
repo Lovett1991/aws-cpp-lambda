@@ -79,7 +79,7 @@ Vagrant.configure("2") do |config|
     git clone --branch 1.7.364 --recurse-submodules https://github.com/aws/aws-sdk-cpp.git
     mkdir aws-sdk-cpp/build
     cd aws-sdk-cpp/build
-    cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DBUILD_ONLY="dynamodb" -DENABLE_TESTING=OFF
+    cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DBUILD_ONLY="dynamodb;logs" -DENABLE_TESTING=OFF
     make && sudo make install
 
     cd /usr/src

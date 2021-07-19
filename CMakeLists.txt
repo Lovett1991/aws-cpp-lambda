@@ -3,7 +3,7 @@ set(CMAKE_CXX_STANDARD 11)
 project(hello LANGUAGES CXX)
 
 find_package(aws-lambda-runtime REQUIRED)
-find_package(AWSSDK REQUIRED COMPONENTS dynamodb)
+find_package(AWSSDK REQUIRED COMPONENTS dynamodb logs)
 
 add_executable(${PROJECT_NAME} "src/main.cpp")
 

@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 RUN apt-get update
-RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y git gcc g++ cmake libcurl4-openssl-dev zlib1g zlib1g-dev libssl-dev zip
+RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y git gcc g++ cmake libcurl4-openssl-dev libssl-dev uuid-dev zlib1g-dev libpulse-dev zip
 
 WORKDIR /usr/src
 RUN git clone https://github.com/awslabs/aws-lambda-cpp.git
